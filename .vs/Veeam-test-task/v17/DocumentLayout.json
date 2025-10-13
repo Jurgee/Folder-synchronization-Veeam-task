@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|c:\\users\\jiris\\veeam-test-task\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|c:\\users\\jiris\\veeam-test-task\\argumentparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|solutionrelative:argumentparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|c:\\users\\jiris\\veeam-test-task\\pathvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|solutionrelative:pathvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|c:\\users\\jiris\\veeam-test-task\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{934022EF-860D-4F64-ADEA-9F77971E1B73}|Veeam-test-task.csproj|solutionrelative:logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,13 +34,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\Users\\jiris\\Veeam-test-task\\Logger.cs",
+              "RelativeDocumentMoniker": "Logger.cs",
+              "ToolTip": "C:\\Users\\jiris\\Veeam-test-task\\Logger.cs",
+              "RelativeToolTip": "Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T19:17:44.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PathValidator.cs",
+              "DocumentMoniker": "C:\\Users\\jiris\\Veeam-test-task\\PathValidator.cs",
+              "RelativeDocumentMoniker": "PathValidator.cs",
+              "ToolTip": "C:\\Users\\jiris\\Veeam-test-task\\PathValidator.cs",
+              "RelativeToolTip": "PathValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T19:01:42.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArgumentParser.cs",
+              "DocumentMoniker": "C:\\Users\\jiris\\Veeam-test-task\\ArgumentParser.cs",
+              "RelativeDocumentMoniker": "ArgumentParser.cs",
+              "ToolTip": "C:\\Users\\jiris\\Veeam-test-task\\ArgumentParser.cs",
+              "RelativeToolTip": "ArgumentParser.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T13:54:14.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\jiris\\Veeam-test-task\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jiris\\Veeam-test-task\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\jiris\\Veeam-test-task\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-10T19:51:08.443Z",
               "EditorCaption": ""

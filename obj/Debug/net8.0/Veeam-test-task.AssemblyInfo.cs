@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Veeam-test-task")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b2559fe3293f1633b3b1e8d609a414c74027a50")]
 [assembly: System.Reflection.AssemblyProductAttribute("Veeam-test-task")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Veeam-test-task")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
