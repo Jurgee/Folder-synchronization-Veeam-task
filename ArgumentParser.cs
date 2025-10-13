@@ -3,7 +3,7 @@
  * Used external library: CommandLineParser (https://github.com/commandlineparser/commandline?tab=readme-ov-file)
  * Author: Jiri Stipek
  * Veeam test task
- * Synchronize files from source folder to backup folder at specified intervals
+ * Parse command-line arguments
  */
 using CommandLine;
 
