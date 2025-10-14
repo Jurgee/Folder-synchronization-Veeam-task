@@ -4,6 +4,7 @@ namespace Veeam_test_task
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             var parser = new ArgumentParser();
@@ -34,6 +35,21 @@ namespace Veeam_test_task
                 Log.Information("Source path validated at {SourcePath}", result.SourceFolder);
                 Validator.ValidatePath(result.BackupFolder, Validator.PathType.Backup);
                 Log.Information("Backup path validated at {BackupPath}", result.BackupFolder);
+
+                // Start synchronization
+                var syncTimer = Timer.SetTimer(result.Interval);
+                Log.Information("-----------Start synchronization-----------");
+                var quitEvent = new ManualResetEvent(false);
+                Console.CancelKeyPress += (sender, eArgs) =>
+                {
+                    eArgs.Cancel = true;
+                    quitEvent.Set();
+                };
+                quitEvent.WaitOne();
+
+                syncTimer.Stop();
+                Log.Information("-----------Synchronization stopped-----------");
+
             }
 
             catch (Exception ex)
