@@ -9,7 +9,7 @@ namespace Veeam_test_task
         {
             var parser = new ArgumentParser();
             var result = parser.ParseArguments(args);
-
+            var syncTimer = new System.Timers.Timer();
             if (result == null)
             {
                 Console.WriteLine("Argument parsing failed. Please check the provided arguments.");
@@ -37,18 +37,19 @@ namespace Veeam_test_task
                 Log.Information("Backup path validated at {BackupPath}", result.BackupFolder);
 
                 // Start synchronization
-                var syncTimer = Timer.SetTimer(result.Interval);
+                syncTimer = Timer.SetTimer(result.Interval, result.SourceFolder, result.BackupFolder);
+
                 Log.Information("-----------Start synchronization-----------");
                 var quitEvent = new ManualResetEvent(false);
+
+                // Handle Ctrl+C to exit app
                 Console.CancelKeyPress += (sender, eArgs) =>
                 {
                     eArgs.Cancel = true;
                     quitEvent.Set();
                 };
                 quitEvent.WaitOne();
-
                 syncTimer.Stop();
-                Log.Information("-----------Synchronization stopped-----------");
 
             }
 
@@ -58,7 +59,10 @@ namespace Veeam_test_task
             }
             finally
             {
+                Log.Information("Synchronization process completed, disposing resources.");
+                Log.Information("-----------Synchronization stopped-----------");
                 Log.CloseAndFlush();
+                syncTimer.Dispose();
             }
         }
     }
