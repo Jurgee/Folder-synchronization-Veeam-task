@@ -11,6 +11,9 @@ namespace Veeam_test_task
 {
     public class ArgumentParser
     {
+        /// <summary>
+        /// Options class to hold command-line arguments
+        /// </summary>
         public class Options
         {
             [Option('s', "source", Required = true, HelpText = "Path to the source folder")]
@@ -25,7 +28,11 @@ namespace Veeam_test_task
             [Option('l', "log", Required = true, HelpText = "Path to the log file")]
             public required string LogFile { get; set; }
         }
-
+        /// <summary>
+        /// Parse command-line arguments using CommandLineParser library
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public Options? ParseArguments(string[] args)
         {
             Options? parsed = null;
