@@ -17,10 +17,14 @@ namespace Veeam_test_task
         /// <param name="filePath"></param>
         public static void Configure(string filePath)
         {
+            // Create a unique file name with timestamp
+            string logFileName = $"log_{DateTime.Now:yyyyMMdd_HHmm}.txt";
+            string logFilePath = Path.Combine(filePath, logFileName);
+
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
-                .WriteTo.File(Path.Combine(filePath, "log.txt"),
-                    rollingInterval: RollingInterval.Day,
+                .WriteTo.File(logFilePath,
+                    rollingInterval: RollingInterval.Infinite,
                     rollOnFileSizeLimit: true)
                 .CreateLogger();
         }
