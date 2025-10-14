@@ -17,25 +17,20 @@ namespace Veeam_test_task
 
             try
             {
-                PathValidator.ValidateLogPath(result.LogFile);
                 Logger.Configure(result.LogFile);
-                Log.Information("Log initialized.");
+                PathValidator.ValidatePath(result.LogFile, PathValidator.PathType.Log);
+                PathValidator.PathsAreSameOrNested(result.SourceFolder, result.BackupFolder);
 
+                Log.Information("Log path validated at {LogPath}", result.LogFile);
+                PathValidator.ValidatePath(result.SourceFolder, PathValidator.PathType.Source);
+                Log.Information("Source path validated at {SourcePath}", result.SourceFolder);
+                PathValidator.ValidatePath(result.BackupFolder, PathValidator.PathType.Backup);
+                Log.Information("Backup path validated at {BackupPath}", result.BackupFolder);
             }
-            catch (UnauthorizedAccessException ex)
-            {
-                Console.WriteLine($"Error: Access denied to path '{result.LogFile}'. {ex.Message}");
-                return;
-            }
-            catch (IOException ex)
-            {
-                Console.WriteLine($"Error: IO exception while validating log path '{result.LogFile}'. {ex.Message}");
-                return;
-            }
+
             catch (Exception ex)
             {
-                Console.WriteLine($"Unexpected error while initializing log path: {ex.Message}");
-                return;
+                Log.Error($"{ex.Message}");
             }
             finally
             {
