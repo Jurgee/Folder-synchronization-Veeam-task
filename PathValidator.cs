@@ -11,12 +11,24 @@ namespace Veeam_test_task
 {
     public class PathValidator
     {
+        /// <summary>
+        /// Path types for validation context
+        /// </summary>
         public enum PathType
         {
             Log,
             Source,
             Backup
         }
+        /// <summary>
+        /// Validate a given path for invalid characters and ensure the directory exists or create it
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="type"></param>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="UnauthorizedAccessException"></exception>
+        /// <exception cref="IOException"></exception>
+        /// <exception cref="Exception"></exception>
         public static void ValidatePath(string path, PathType type)
         {
             string fullPath = Path.GetFullPath(path);
@@ -49,6 +61,12 @@ namespace Veeam_test_task
             }
         }
 
+        /// <summary>
+        /// Check if two paths are the same or nested within each other
+        /// </summary>
+        /// <param name="path1"></param>
+        /// <param name="path2"></param>
+        /// <exception cref="ArgumentException"></exception>
         public static void PathsAreSameOrNested(string path1, string path2)
         {
             string full1 = Path.GetFullPath(path1);
