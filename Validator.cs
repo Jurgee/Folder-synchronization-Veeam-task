@@ -9,7 +9,7 @@ using Serilog;
 
 namespace Veeam_test_task
 {
-    public class PathValidator
+    public class Validator
     {
         /// <summary>
         /// Path types for validation context
@@ -20,6 +20,7 @@ namespace Veeam_test_task
             Source,
             Backup
         }
+
         /// <summary>
         /// Validate a given path for invalid characters and ensure the directory exists or create it
         /// </summary>
@@ -77,6 +78,12 @@ namespace Veeam_test_task
             if (full1.StartsWith(full2 + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase) ||
                 full2.StartsWith(full1 + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
                 throw new ArgumentException("Source and backup paths cannot be nested within each other.");
+        }
+
+        public static void ValidateInterval(int interval)
+        {
+            if (interval <= 0)
+                throw new ArgumentException("Interval must be a positive integer.");
         }
     }
 }
