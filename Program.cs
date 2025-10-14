@@ -1,9 +1,9 @@
 ﻿/*
- * Program.cs
- * Author: Jiri Stipek
- * Veeam test task
- * Main program class for Veeam test task
- */
+    * Program.cs
+    * Author: Jiri Stipek
+    * Veeam test task
+    * Main program class for Veeam test task
+*/
 using Serilog;
 
 namespace Veeam_test_task

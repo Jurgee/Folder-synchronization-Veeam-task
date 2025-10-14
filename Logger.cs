@@ -1,10 +1,10 @@
 ﻿/*
- * Logger.cs
- * Used external library: Serilog (https://github.com/serilog/serilog
- * Author: Jiri Stipek
- * Veeam test task
- * Configure Serilog for logging to console and file
- */
+    * Logger.cs
+    * Used external library: Serilog (https://github.com/serilog/serilog
+    * Author: Jiri Stipek
+    * Veeam test task
+    * Configure Serilog for logging to console and file
+*/
 using Serilog;
 
 namespace Veeam_test_task

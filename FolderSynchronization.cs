@@ -1,4 +1,10 @@
-﻿using Serilog;
+﻿/*
+    * FolderSynchronization.cs
+    * Author: Jiri Stipek
+    * Veeam test task
+    * Synchronize source and backup folders
+*/
+using Serilog;
 
 namespace Veeam_test_task
 {

@@ -1,9 +1,9 @@
 ﻿/*
-* Timer.cs
- * Used external library: System.Timers (https://learn.microsoft.com/cs-cz/dotnet/api/system.timers.timer?view=net-9.0)
-* Author: Jiri Stipek
-* Veeam test task
-* Set up a timer to trigger synchronization at specified intervals
+    * Timer.cs
+    * Used external library: System.Timers (https://learn.microsoft.com/cs-cz/dotnet/api/system.timers.timer?view=net-9.0)
+    * Author: Jiri Stipek
+    * Veeam test task
+    * Set up a timer to trigger synchronization at specified intervals
 */
 namespace Veeam_test_task
 {

@@ -1,10 +1,10 @@
 ﻿/*
- * ArgumentParser.cs
- * Used external library: CommandLineParser (https://github.com/commandlineparser/commandline?tab=readme-ov-file)
- * Author: Jiri Stipek
- * Veeam test task
- * Parse command-line arguments
- */
+    * ArgumentParser.cs
+    * Used external library: CommandLineParser (https://github.com/commandlineparser/commandline?tab=readme-ov-file)
+    * Author: Jiri Stipek
+    * Veeam test task
+    * Parse command-line arguments
+*/
 using CommandLine;
 
 namespace Veeam_test_task

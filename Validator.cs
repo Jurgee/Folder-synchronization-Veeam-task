@@ -1,9 +1,9 @@
 ﻿/*
- * PathValidator.cs
- * Author: Jiri Stipek
- * Veeam test task
- * Validate paths and ensure the directory exists or create it
- */
+    * PathValidator.cs
+    * Author: Jiri Stipek
+    * Veeam test task
+    * Validate paths and ensure the directory exists or create it
+*/
 
 using Serilog;
 
