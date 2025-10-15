@@ -15,7 +15,7 @@ namespace Veeam_test_task
             var parser = new ArgumentParser();
             var result = parser.ParseArguments(args);
             var syncTimer = new System.Timers.Timer();
-            if (result == null)
+            if (result is null)
             {
                 Console.WriteLine("Argument parsing failed. Please check the provided arguments.");
                 return;
