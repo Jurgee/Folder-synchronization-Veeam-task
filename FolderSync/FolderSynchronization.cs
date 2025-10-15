@@ -91,7 +91,7 @@ namespace Veeam_test_task
                 {
                     try
                     {
-                        Log.Information("Deleting file {File} (no longer in source)", backupFile.FullName);
+                        Log.Information("Deleting file {File} (no longer exists in source)", backupFile.FullName);
                         backupFile.Delete();
                     }
                     catch (Exception ex)
