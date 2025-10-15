@@ -1,4 +1,9 @@
-﻿using Veeam_test_task;
+﻿/*
+    * SourceFolderSyncTests.cs
+    * Author: Jiri Stipek
+    * Veeam test task
+ */
+using Veeam_test_task;
 
 namespace FolderSyncTests
 {
