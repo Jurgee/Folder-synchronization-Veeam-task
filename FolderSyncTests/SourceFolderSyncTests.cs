@@ -13,12 +13,10 @@ namespace FolderSyncTests
 
         public SourceFolderSyncTests()
         {
-            // Create a unique temporary root folder for testing
             tempRoot = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             Directory.CreateDirectory(tempRoot);
         }
 
-        // Dispose is automatically called by xUnit after each test
         public void Dispose()
         {
             Cleanup(tempRoot);
@@ -51,7 +49,7 @@ namespace FolderSyncTests
         }
 
         [Fact]
-        public void ValidatePath_ThrowsArgumentException_OnInvalidSourcePath()
+        public void ValidatePath_ThrowsIOException_OnInvalidSourcePath()
         {
             string invalidPath = "C:\\Invalid<>Source";
 
