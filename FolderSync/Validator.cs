@@ -80,6 +80,11 @@ namespace Veeam_test_task
                 throw new ArgumentException("Source and backup paths cannot be nested within each other.");
         }
 
+        /// <summary>
+        /// Validate that the interval is a positive integer
+        /// </summary>
+        /// <param name="interval"></param>
+        /// <exception cref="ArgumentException"></exception>
         public static void ValidateInterval(int interval)
         {
             if (interval <= 0)
