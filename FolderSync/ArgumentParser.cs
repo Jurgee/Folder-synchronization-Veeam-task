@@ -44,7 +44,6 @@ namespace Veeam_test_task
                 })
                 .WithNotParsed(errors =>
                 {
-                    Console.WriteLine("Failed to parse command-line arguments.");
                 });
 
             return parsed;

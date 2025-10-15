@@ -10,15 +10,14 @@ namespace Veeam_test_task
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             var parser = new ArgumentParser();
             var result = parser.ParseArguments(args);
             var syncTimer = new System.Timers.Timer();
             if (result is null)
             {
-                Console.WriteLine("Argument parsing failed. Please check the provided arguments.");
-                return;
+                return 1;
             }
 
             try
@@ -57,6 +56,7 @@ namespace Veeam_test_task
             catch (Exception ex)
             {
                 Log.Error($"{ex.Message}");
+                return 1;
             }
             finally
             {
@@ -65,6 +65,8 @@ namespace Veeam_test_task
                 Log.CloseAndFlush();
                 syncTimer.Dispose();
             }
+
+            return 0;
         }
     }
 }
